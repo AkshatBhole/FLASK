@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #48C3EB, #718EDD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .container:hover {
+    transform: scale(1.02);
+  }
+  .left-section {
+    flex: 1;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #14274e, #394867);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .left-section h1 {
+    font-size: 2.5rem; /* Adjusted for smaller screens */
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  .left-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+  .razor {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .razorpay {
+    width: 80px; 
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-left: 5px solid #48C3EB;
+    padding: 20px;
+  }
+  .chatbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+  }
+  .messages {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+  .input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-right: 10px;
+  }
+  input[type="text"]:focus {
+    border-color: #48C3EB;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .bubble {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+  }
+  .user .bubble {
+    background-color: #d1f7c4; 
+    align-self: flex-end; 
+  }
+  .bot .bubble {
+    background-color: #f1f1f1; 
+    align-self: flex-start; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto; 
+    }
+    .left-section {
+      padding: 20px;
+    }
+    .left-section h1 {
+      font-size: 2rem; 
+    }
+    .left-section p {
+      font-size: 0.9rem; 
+    }
+    .razorpay {
+      width: 60px; 
+      height: 60px;
+    }
+    .right-section {
+      padding: 10px; 
+    }
+    .input-area {
+      flex-direction: column; 
+      align-items: stretch; 
+    }
+    input[type="text"] {
+      margin-right: 0; 
+      margin-bottom: 10px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .left-section h1 {
+      font-size: 1.5rem; 
+    }
+    .left-section p {
+      font-size: 0.8rem; 
+    }
+  }

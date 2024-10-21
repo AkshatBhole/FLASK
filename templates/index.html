@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+Conversational Payments
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="left-section">
+        <h1>Conversational Payments</h1>
+        <p>Welcome to my conversational website where you can interact with me using our voice chat feature. Just type or speak to communicate.</p>
+        <p>We use Razorpay as our payment gateway.</p>
+        <div class="razor">
+            <img src="{{ url_for('static', filename='razorpay.png') }}" alt="Razorpay" class="razorpay">
+            <p>Powered by Razorpay</p>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="chatbox">
+            <div class="messages" id="messages"></div>
+            <div class="input-area">
+                <input type="text" id="chatInput" placeholder="Say something...">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
